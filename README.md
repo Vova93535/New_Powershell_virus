@@ -1,32 +1,31 @@
-# ⚠️ ВНИМАНИЕ: ЭКСТРЕМАЛЬНО ОПАСНЫЙ КОД ⚠️
+# ⚠️ WARNING: EXTREMELY DANGEROUS CODE ⚠️
 
-Данный репозиторий содержит скрипт `dead.ps1`, который **полностью уничтожает операционную систему Windows**.  
-**НИ В КОЕМ СЛУЧАЕ НЕ ЗАПУСКАЙТЕ ЕГО НА СВОЁМ ОСНОВНОМ КОМПЬЮТЕРЕ ИЛИ В СЕТИ, КОТОРАЯ ВАМ ДОРОГА!**
+This repository contains the script `dead.ps1`, which **completely destroys the Windows operating system**.  
+**NEVER RUN IT ON YOUR MAIN COMPUTER OR ON A NETWORK THAT YOU CARE ABOUT!**
 
-## Предназначение
-Этот код предоставлен **исключительно в образовательных целях** для:
-- Изучения механизмов работы вредоносного ПО.
-- Тестирования в изолированных средах (виртуальные машины, песочницы типа Browserling, Any.Run).
-- Понимания важности резервного копирования и защиты системы.
+## Purpose
+This code is provided **solely for educational purposes** for:
+- Studying the mechanisms of malware.
+- Testing in isolated environments (virtual machines, sandboxes such as Browserling, Any.Run).
+- Understanding the importance of system backup and protection.
 
-Автор не несёт ответственности за любое неправомерное использование данного материала.
+ The author is not responsible for any misuse of this material.
 
-## Что делает скрипт?
-При запуске с правами администратора скрипт выполняет следующие необратимые действия:
+## What does the script do?
+When run with administrator privileges, the script performs the following irreversible actions:
 
-- **Отключает защиту**: Microsoft Defender, UAC, мониторинг.
-- **Повреждает системные файлы** (включая `exe`, `dll`, `sys`) в папках `System32`, `Program Files`, `AppData` путём замены случайных байтов.
-- **Разрушает реестр** — удаляет критические ветки (`Services`, `Run`, `Winlogon`), что делает Windows неработоспособной.
-- **Удаляет теневые копии** и отключает восстановление системы (`vssadmin`).
-- **Блокирует инструменты администрирования**: диспетчер задач, редактор реестра, поиск.
-- **Создаёт хаос**: постоянно меняет курсоры, открывает множество окон `cmd` с сообщением «ПАНДЕМИЯ», засоряет диск мусором.
-- **Закрепляется в системе**: копирует себя в автозагрузку и планировщик задач.
+- **Disables protection:** Microsoft Defender, UAC, and monitoring.
+- **Disables protection:** Microsoft Defender, UAC, and monitoring.Damages system files** (including `exe`, `dll`, `sys`) in the `System32`, `Program Files`, and `AppData` folders by replacing random bytes.
+- **Destroys the registry** by deleting critical branches (`Services`, `Run`, `Winlogon`), which renders Windows inoperable.
+- **Removes shadow copies** and disables system recovery (`vssadmin`).
+- **Blocks administration tools:** Task Manager, Registry Editor, and Search.- **Creates chaos**: constantly changes cursors, opens multiple `cmd` windows with the message "PANDEMIC", and fills the disk with garbage.
+- **Stays in the system**: copies itself to the startup and task scheduler.
 
-## Как безопасно протестировать?
-Только в **строго изолированной среде**:
-- Онлайн-песочницы: [Browserling](https://www.browserling.com), [Any.Run](https://app.any.run), [Cuckoo Sandbox](https://cuckoo.cert.ee).
-- Локальная виртуальная машина (VirtualBox, VMware) с отключённой сетью.
-- **Никогда не запускайте на реальном оборудовании!**
+## How to test safely?
+Only in a **strictly isolated environment**:
+- Online sandboxes: [Browserling](https://www.browserling.com), [Any.Run](https://app.any.run), [Cuckoo Sandbox](https://cuckoo.cert.ee).
+- Local virtual machine (VirtualBox, VMware) with disabled network.
+- **Never run on real hardware!**
 
-## Лицензия
-Данный код распространяется только для исследовательских целей. Любое использование для нанесения ущерба запрещено.
+## License
+This code is distributed for research purposes only. Any use for causing damage is prohibited.
