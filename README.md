@@ -29,3 +29,5 @@ Only in a **strictly isolated environment**:
 
 ## License
 This code is distributed for research purposes only. Any use for causing damage is prohibited.
+
+<sup>This material is provided for educational purposes only. The author is not responsible for the consequences of its use. START ONLY ON Virtual Machine!</sup>
