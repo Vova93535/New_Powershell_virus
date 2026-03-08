@@ -3,6 +3,11 @@
 This repository contains the script `dead.ps1`, which **completely destroys the Windows operating system**.  
 **NEVER RUN IT ON YOUR MAIN COMPUTER OR ON A NETWORK THAT YOU CARE ABOUT!**
 
+> # Info
+> You need start `start.bat`.
+>
+> After `start.bat` automatically starts `dead.ps1` **on behalf of the administrator**.
+
 ## Purpose
 This code is provided **solely for educational purposes** for:
 - Studying the mechanisms of malware.
@@ -26,6 +31,15 @@ Only in a **strictly isolated environment**:
 - Online sandboxes: [Browserling](https://www.browserling.com), [Any.Run](https://app.any.run), [Cuckoo Sandbox](https://cuckoo.cert.ee).
 - Local virtual machine (VirtualBox, VMware) with disabled network.
 - **Never run on real hardware!**
+
+## How start?
+You can start:
+- Just start `start.bat`
+- Start `dead.ps1` **on behalf of the administrator**.
+- Use cmd:
+```bash
+powershell C:\path\to\dead.ps1
+```
 
 ## License
 This code is distributed for research purposes only. Any use for causing damage is prohibited.
